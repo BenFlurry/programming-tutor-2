@@ -1,0 +1,50 @@
+Ben's Guide for Year 1 Term 1!
+
+Our lord and saviour Max Kanovic's Discrete Maths:
+- lectures may be hard to understand, but still worth going to
+- any questions (or if you dont get his style of teaching) do ask in the TA class, since they will be very helpful
+- exam is really easy, have a look at past papers and if you can do them youll be fine
+
+Design and Professional skills (Term 1):
+- do the optional programs since they build you up and get you ready for tetris
+- speaking of, attend my session on tetris (see timetable below) for a guaranteed 60-70% (depending on how high he sets that boundary)
+- don't let tetris take up too much time, it's only around 25% of that module so don't let it take 90% of your time
+- for the protocol assignment, make sure to use key terminology (should, could, must etc.) and have a look at some basic network protocols to determine how the documentation should be written, we'll go over this in class after reading week
+
+Engineering Challenges:
+- The first ESP32 project is quite simple, make sure the clock looks pretty and use a wifi module import to handle the wifi connection aspect
+- GLHF for bioreactor lol.
+- attend all bioreactor labs, theyre crucial for progress and making sure EEE do their job. Use thingsboard for the front end analytics, and develop that part of the program while EEE do the circuit board, then integrate the 2 systems together (between the arduino and ESP)
+- make sure the write up is good, our demo didnt work but the writeup was amazing so we got a good grade 
+
+Principles of Programming:
+- Attend my c101 and haskell101 sessions to get a quick understanding of the language, its quirks and things to watch out for
+- with both courseworks make sure you complete each step sequentially, dont jump straight to the extensions and end up panicing since you have no program to submit if it doesnt work.
+- your code quality matters more than quantity or difficulty for the c courseworks
+- attend the lectures since thats what will be examined, you may miss a few functions that you wont use for coursework but may need for the exam
+- labs are really helpful if youre struggling
+
+Timetable:
+Week 1 -> General induction, lots of waffle, if you were there then i hope you put up with it
+Week 2 -> how to c, covering pretty much everything you need to know in c, common mistakes and some fun quirks with the language, and a bit of command line fun
+Week 3 -> data structures in c (which will come in very handy for your coursework), creating a stack together, then practicing by individually creating a queue struct
+Week 4 -> git on the command line, how to work collaboratively with github, and how it can save your life when it comes to group projects
+Week 5 -> tetris tetris tetris (and c coursework tips and tricks as a quick refresher)
+<------- reading week --------->
+Week 6 -> code review of your c coursework (if its been marked by then and you guys are comfortable going through it) + haskell101
+Week 7 -> advice for bioreactor, some leetcode and some more haskell fun
+Week 8 -> more advanced haskell getting ready for coursework
+Week 9 -> not sure yet
+Week 10 -> advent of code / leetcode + christmassy shenanigans (maybe cake idk)
+
+Internships:
+i understand there was a lot of information thrown at you on thursdays session, so heres some clarification and reassurance:
+- getting a spring week is great but by no means essential
+- anyone on a Meng dont worry at all about applying to any big companies since it is likely youll be autorejected at cv level
+- be honest when applying, and the best of luck!
+- it can be highly stressful for some, so if its taking a toll on your mental health then give it a break and come back at a later date
+- make a tracker so you can keep track of each internship application
+- leetcode assessments are usually level easy or an easier medium, get comfortable with the format. Hackerrank is good practice too!
+- most internships close october or november
+- apply for macquarie technology internship, i got it and it was a very easy process!
+- mental health comes first!
