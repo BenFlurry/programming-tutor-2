@@ -165,7 +165,7 @@ void pointer_fun(void) {
     // interprets the content of the variable as a pointer and dereferences it
     int z = *x;
     
-    
+
     // pointer to a struct
     point* p;
     
@@ -197,7 +197,7 @@ void static_array_shenanigans(void) {
     
     // they can also be defined like this
     int some_arr[] = {1,2,3,4,5};
-    
+
     // somehow this **technically** works, but for the love of god dont.
     3[some_arr] = 10;
     some_arr[3] = 10;
