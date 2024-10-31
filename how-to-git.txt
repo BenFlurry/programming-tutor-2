@@ -1,0 +1,83 @@
+git "INSERT COMMAND HERE"
+
+init 
+- this just creates a .git file and therefore makes a repo in the directory you called this in
+
+add
+- follow this by the files that you want to add to a commit
+use . to add every change in a working directory (be careful not to push venv files, include these in your .gitignore)
+
+status
+- shows which files are added to github (or not) and any files that are being staged for a commit
+
+git commit -m "started a new repo, so added all files"
+- adds all local files included in git add to a commit, ready to be pushed
+
+
+:!q -> quits fim
+
+
+push
+pushes local commits to the github repo
+
+pull
+pulls any changes that people have made to the repo. if working collaboratively then ensure that you do this before any commit to avoid merge conflicts later
+
+clone
+clones a repo into a local folder
+
+reset (--hard)
+- if youve done a big fuck up and want to go back to your last commit (you cant undo this so be sure)
+
+git add .
+git commit -m "commit name"
+if (first_time_pushing)
+    git remote add origin git@github.com:BenFlurry/example101.git
+    git push --set-upstream origin main
+
+otherwise
+    git push
+
+
+your main 3 commands for working alone on github:
+git add .
+git commit -m "name of commit"
+git push
+
+to go back to a commit
+git log (copy the commit hash of the commit you want to go to)
+git checkout (commit hash you just copied)
+git checkout -b (new branch name)
+
+if password doesnt work, go to github and sign in,
+-> settings
+-> developer settings
+-> personal access token
+-> create new token
+-> select which boxes you think are relevant (or all)
+-> generate token
+-> copy the token hash
+-> use in place of password whenever requested for on command line
+
+.gitignore -> a list of files that git will ignore (virtual environments are key here, you dont want to be pushing all the packages youve just installed)
+
+when working collaboratively, this is what you do
+open a new branch to work on a new feature
+ - git checkout -b branch-name
+work on your branch
+ - git push --set-upstream origin branch-name -> only for the first push to this new branch, otherwise git push is fine 
+once youve done your feature, go on the github website and open the pull request, get a teammate to review it and merge it into main
+
+to go back to a previous commit:
+git log
+copy the commit hash number of the commit you want to go back to (having good commit names makes this process much easiler)
+git checkout <commit-hash>
+
+if you know you really dont want to have the other commits you made after this point (not advisable but up to you) and you want to continue working from the point you just rolled back to you can:
+git reset --hard <commit-hash>
+git push origin main -f 
+
+otherwise you can make a branch off of the commit hash:
+git checkout -b <your-new-branch-name> <commit-hash>
+git push origin <your-new-branch-name>
+
