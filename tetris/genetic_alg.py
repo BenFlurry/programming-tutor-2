@@ -1,4 +1,7 @@
 """
+TRY REMOVING OR LOWERING SLEEP IN VISUAL.PY
+
+
 INITIALISATION
 start with a population of randomly generated individuals, each of them with their own randomly generated weights
 

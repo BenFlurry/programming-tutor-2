@@ -3,28 +3,35 @@ INITIALISATION
 start with a single set of randomly (or chosen weights)
 
 EVALUATE FITNESS
-evaluate the fitness (tetris game score) of the weights
+evaluate the fitness (tetris game score) of the weights (the actual score you get running tetris all the way through)
 
 MUTATION
 each weight, step it down, and up, and see how that changes the fitness score. If it improves, then update the weights and move onto the next weight to test
 
 REPEAT
 repeat until the weights dont change after all weights have been stepped up and down. this will be your optimum weights. if it still doesnt score well, then manually (or programmatically) start jumping weights to new values to prevent convergence on local maxima
+then start jumping the value of the weight up and down significantly to avoid 
+
+25, 100, 400, 1600
+100, 200, 400, 1600
 """
 
 import random
+
 
 class TetrisAutoplayer:
     def __init__(self, weights=None):
         # Default weights if none are provided
         if weights is None:
             weights = {
+                # actually chatgpt generated dont copy for the love of your grade
                 "line_clear_weight": 10,
                 "move_weight": 1,
-                "height_penalty": 0.5,
-                "hole_penalty": 1.5,
-                "bumpiness_penalty": 0.75,
-                "well_depth_penalty": 0.5
+                "height_penalty": -0.5,
+                "hole_penalty": -1.5,
+                "bumpiness_penalty": -0.75,
+                "well_depth_penalty": 0.5,
+                "tetris_weight": 100
             }
         self.weights = weights
         self.game_score = 0 
@@ -43,9 +50,9 @@ class TetrisAutoplayer:
 
         # Calculate score using weighted factors
         score = (lines_cleared * self.weights["line_clear_weight"] +
-                 self.weights["move_weight"] -
-                 aggregate_height * self.weights["height_penalty"] -
-                 num_holes * self.weights["hole_penalty"] -
+                 self.weights["move_weight"] +
+                 aggregate_height * self.weights["height_penalty"] +
+                 num_holes * self.weights["hole_penalty"] +
                  bumpiness * self.weights["bumpiness_penalty"])
 
         return score
